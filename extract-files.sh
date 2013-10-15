@@ -16,7 +16,7 @@
 
 DEVICE=4012a
 COMMON=common
-MANUFACTURER=qcom
+MANUFACTURER=alcatel
 
 if [[ -z "${ANDROIDFS_DIR}" && -d ../../../backup-${DEVICE}/system ]]; then
 ANDROIDFS_DIR=../../../backup-${DEVICE}
