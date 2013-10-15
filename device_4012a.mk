@@ -16,6 +16,11 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
+	device/alcatel/4012a/touch.idc:system/usr/idc/msg2133.idc \
+	device/alcatel/4012a/touch.idc:system/usr/idc/ft5x06_ts.idc \
+	device/alcatel/4012a/media_profiles.xml:system/etc/media_profiles.xml \
+	device/alcatel/4012a/audio.conf:system/etc/bluetooth/audio.conf \
+	device/alcatel/4012a/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
 $(call inherit-product, build/target/product/full.mk)
 
