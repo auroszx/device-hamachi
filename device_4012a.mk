@@ -15,7 +15,7 @@ else
 endif
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
+    $(LOCAL_KERNEL):kernel \
 	device/alcatel/4012a/touch.idc:system/usr/idc/msg2133.idc \
 	device/alcatel/4012a/touch.idc:system/usr/idc/ft5x06_ts.idc \
 	device/alcatel/4012a/media_profiles.xml:system/etc/media_profiles.xml \
