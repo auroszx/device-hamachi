@@ -22,7 +22,15 @@ PRODUCT_COPY_FILES += \
 	device/alcatel/4012a/audio.conf:system/etc/bluetooth/audio.conf \
 	device/alcatel/4012a/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
 
+$(call inherit-product-if-exists, vendor/alcatel/4012a/4012a-vendor-blobs.mk)
+$(call inherit-product-if-exists, vendor/qcom/common/vendor-blobs.mk)
 $(call inherit-product, build/target/product/full.mk)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+  rild.libpath=/system/lib/libril-qc-1.so \
+  rild.libargs=-d/dev/smd0 \
+  ro.use_data_netmgrd=true \
+  ro.display.colorfill=1 \
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_4012a
