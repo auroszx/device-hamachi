@@ -16,11 +16,15 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-	device/alcatel/4012a/touch.idc:system/usr/idc/msg2133.idc \
-	device/alcatel/4012a/touch.idc:system/usr/idc/ft5x06_ts.idc \
-	device/alcatel/4012a/media_profiles.xml:system/etc/media_profiles.xml \
-	device/alcatel/4012a/audio.conf:system/etc/bluetooth/audio.conf \
-	device/alcatel/4012a/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf
+	device/alcatel/4012a/prebuild/touch.idc:system/usr/idc/msg2133.idc \
+	device/alcatel/4012a/prebuild/touch.idc:system/usr/idc/ft5x06_ts.idc \
+	device/alcatel/4012a/prebuild/media_profiles.xml:system/etc/media_profiles.xml \
+	device/alcatel/4012a/prebuild/audio.conf:system/etc/bluetooth/audio.conf \
+	device/alcatel/4012a/prebuild/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+	device/alcatel/4012a/prebuild/7k_handset.kl:system/usr/keylayout/7k_handset.kl \
+	device/alcatel/4012a/prebuild/surf_keypad.kl:system/usr/keylayout/surf_keypad.kl \
+	device/alcatel/4012a/prebuild/surf_keypad.kcm:system/usr/keychars/surf_keypad.kcm
+	
 
 $(call inherit-product-if-exists, vendor/alcatel/4012a/4012a-vendor-blobs.mk)
 $(call inherit-product-if-exists, vendor/qcom/common/vendor-blobs.mk)
