@@ -18,7 +18,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_USERIMAGES_USE_EXT4 := false
 
 TARGET_BOOTLOADER_BOARD_NAME := 7x27
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom loglevel=1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=4012a loglevel=1
 BOARD_KERNEL_BASE := 0x00c54004
 
 BOARD_EGL_CFG := device/alcatel/4012a/egl.cfg
