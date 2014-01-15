@@ -285,7 +285,7 @@ if [ -f ../../../${BOOTIMG} ]; then
     (cd ../../.. && ./build.sh unbootimg)
     . ../../../build/envsetup.sh
     HOST_OUT=$(get_build_var HOST_OUT_$(get_build_var HOST_BUILD_TYPE))
-    KERNEL_DIR=../../../vendor/${MANUFACTURER}/${DEVICE}
+    KERNEL_DIR=../../../device/${MANUFACTURER}/${DEVICE}/prebuilt
     cp ../../../${BOOTIMG} ${KERNEL_DIR}
     ../../../${HOST_OUT}/bin/unbootimg ${KERNEL_DIR}/${BOOTIMG}
     mv ${KERNEL_DIR}/${BOOTIMG}-kernel ${KERNEL_DIR}/kernel
