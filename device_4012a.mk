@@ -16,8 +16,8 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-	device/alcatel/4012a/prebuilt/touch.idc:system/usr/idc/msg2133.idc \
-	device/alcatel/4012a/prebuilt/touch.idc:system/usr/idc/ft5x06_ts.idc \
+	device/alcatel/4012a/idc/touch.idc:system/usr/idc/msg2133.idc \
+	device/alcatel/4012a/idc/touch.idc:system/usr/idc/ft5x06_ts.idc \
 	device/alcatel/4012a/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
 	device/alcatel/4012a/prebuilt/audio.conf:system/etc/bluetooth/audio.conf \
 	device/alcatel/4012a/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
@@ -27,7 +27,7 @@ PRODUCT_COPY_FILES += \
 	
 
 $(call inherit-product-if-exists, vendor/alcatel/4012a/4012a-vendor-blobs.mk)
-$(call inherit-product-if-exists, vendor/qcom/common/vendor-blobs.mk)
+$(call inherit-product-if-exists, vendor/alcatel/common/vendor-blobs.mk)
 
 $(call inherit-product, build/target/product/full.mk)
 
