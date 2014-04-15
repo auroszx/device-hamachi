@@ -5,8 +5,6 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/alcatel/4012a/4012a-vendor.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/alcatel/4012a/overlay
-
 LOCAL_PATH := device/alcatel/4012a
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
@@ -24,7 +22,7 @@ PRODUCT_COPY_FILES += \
 	device/alcatel/4012a/idc/touch.idc:system/usr/idc/msg2133.idc \
 	device/alcatel/4012a/idc/touch.idc:system/usr/idc/ft5x06_ts.idc \
 	device/alcatel/4012a/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
-	device/alcatel/4012a/prebuilt/media_codecs.xml:system/etc/media_codecs.xml
+	device/alcatel/4012a/prebuilt/media_codecs.xml:system/etc/media_codecs.xml \
 	device/alcatel/4012a/prebuilt/audio.conf:system/etc/bluetooth/audio.conf \
 	device/alcatel/4012a/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
 	device/alcatel/4012a/prebuilt/7k_handset.kl:system/usr/keylayout/7k_handset.kl \
