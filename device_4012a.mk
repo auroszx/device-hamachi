@@ -16,11 +16,11 @@ endif
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel \
-    device/alcatel/4012a/init/init.rc:root/init.rc \
-    device/alcatel/4012a/init/init.target.rc:root/init.target.rc \
-    device/alcatel/4012a/init/init.qcom.usb.rc:root/init.qcom.usb.rc \
-    device/alcatel/4012a/init/ueventd.rc:root/ueventd.rc \
-    device/alcatel/4012a/init/charger:root/charger \
+	device/alcatel/4012a/init/init.rc:root/init.rc \
+	device/alcatel/4012a/init/init.target.rc:root/init.target.rc \
+	device/alcatel/4012a/init/init.qcom.usb.rc:root/init.qcom.usb.rc \
+	device/alcatel/4012a/init/ueventd.rc:root/ueventd.rc \
+	device/alcatel/4012a/init/charger:root/charger \
 	device/alcatel/4012a/idc/touch.idc:system/usr/idc/msg2133.idc \
 	device/alcatel/4012a/idc/touch.idc:system/usr/idc/ft5x06_ts.idc \
 	device/alcatel/4012a/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
