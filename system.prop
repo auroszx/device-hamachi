@@ -73,3 +73,27 @@ persist.omh.enabled=1
 
 # Virtual Buttons
 qemu.hw.mainkeys=0
+
+#
+# system props for SD card emulation of emmc partition
+#
+ro.emmc.sdcard.partition=18
+
+#
+# system property to enforce Phone Mode view
+#
+ro.screen.layout=normal
+
+#System prop for setting the pixel format
+#
+ro.staticwallpaper.pixelformat=RGB_565
+
+#
+# Simulate sdcard on /data/media
+#
+persist.fuse_sdcard=false
+
+#
+#System prop for disabling the meta data mode for encoder
+#
+debug.camcorder.disablemeta=0
