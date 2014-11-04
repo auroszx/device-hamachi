@@ -14,15 +14,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE=4012a
+DEVICE=hamachi
 COMMON=common
-MANUFACTURER=alcatel
+MANUFACTURER=qcom
 
 if [[ -z "${ANDROIDFS_DIR}" && -d ../../../backup-${DEVICE}/system ]]; then
 ANDROIDFS_DIR=../../../backup-${DEVICE}
 fi
 
-# The pre-installed image on 4012a from parnter is for B2G already,
+# The pre-installed image on hamachi from parnter is for B2G already,
 # so skip to check wethether device now is Android or not.
 
 if [[ -z "${ANDROIDFS_DIR}" ]]; then
@@ -277,7 +277,7 @@ copy_files "$COMMON_FIRMWARE" "system/etc/firmware" "etc/firmware"
 cp "$PROPRIETARY_COMMON_DIR/$2/libcnefeatureconfig.so" "$PROPRIETARY_COMMON_DIR/$2/objlibcnefeatureconfig.so"
 echo $BASE_PROPRIETARY_COMMON_DIR/$2/objlibcnefeatureconfig.so:obj/lib/libcnefeatureconfig.so \\ >> $COMMON_BLOBS_LIST
 
-#use the blobs related to Adreno from device since ICS version in 4012a is strawberry not chocolate
+#use the blobs related to Adreno from device since ICS version in hamachi is strawberry not chocolate
 (cat << EOF) | sed s/__DEVICE__/$DEVICE/g | sed s/__MANUFACTURER__/$MANUFACTURER/g > ../../../vendor/$MANUFACTURER/$DEVICE/$DEVICE-vendor-blobs.mk
 # Copyright (C) 2010 The Android Open Source Project
 #
@@ -295,7 +295,7 @@ echo $BASE_PROPRIETARY_COMMON_DIR/$2/objlibcnefeatureconfig.so:obj/lib/libcnefea
 
 EOF
 
-BOOTIMG=boot-4012a.img
+BOOTIMG=boot-hamachi.img
 if [ -f ../../../${BOOTIMG} ]; then
     (cd ../../.. && ./build.sh unbootimg)
     . ../../../build/envsetup.sh

@@ -1,7 +1,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/alcatel/4012a/BoardConfigVendor.mk
+-include vendor/qcom/hamachi/BoardConfigVendor.mk
 
 TARGET_NO_BOOTLOADER := true
 BOARD_KERNEL_PAGESIZE := 2048
@@ -18,10 +18,10 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_USERIMAGES_USE_EXT4 := false
 
 TARGET_BOOTLOADER_BOARD_NAME := 7x27
-BOARD_KERNEL_CMDLINE := androidboot.hardware=4012a loglevel=1
+BOARD_KERNEL_CMDLINE := androidboot.hardware=hamachi loglevel=1
 BOARD_KERNEL_BASE := 0x00c54004
 
-BOARD_EGL_CFG := device/alcatel/4012a/egl.cfg
+BOARD_EGL_CFG := device/qcom/hamachi/egl.cfg
 
 # fix this up by examining /proc/mtd on a running device
 #dev:    size   erasesize  name
@@ -57,7 +57,7 @@ BOARD_PERSISTIMAGE_PARTITION_SIZE := 4194304
 BOARD_CACHEIMAGE_PARTITION_SIZE := 41943040
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-TARGET_PREBUILT_KERNEL := device/alcatel/4012a/kernel
+TARGET_PREBUILT_KERNEL := device/qcom/hamachi/kernel
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 

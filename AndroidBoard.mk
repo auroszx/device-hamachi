@@ -5,4 +5,4 @@ include $(CLEAR_VARS)
 #ALL_PREBUILT += $(INSTALLED_KERNEL_TARGET)
 
 # include the non-open-source counterpart to this file
--include device/alcatel/4012a/AndroidBoardVendor.mk
+-include device/qcom/hamachi/AndroidBoardVendor.mk
